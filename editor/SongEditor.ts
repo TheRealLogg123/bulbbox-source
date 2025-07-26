@@ -60,7 +60,7 @@ import { FontPrompt } from "./CustomFontPrompt";
 import { TutorialPrompt } from "./TutorialPrompt";
 import { SongDetailsPrompt } from "./SongDetailsPrompt";
 
-import { UpdatePopup } from "./UpdatePopup";
+//import { UpdatePopup } from "./UpdatePopup";
 
 const { button, div, input, select, span, optgroup, option, canvas} = HTML;
 
@@ -2485,9 +2485,9 @@ export class SongEditor {
         this._barScrollBar.changePos(offset);
     }
     
-    private updatePromptHolder = new UpdatePopup();
+   /// private updatePromptHolder = new UpdatePopup();
 
-    public whenUpdated = (): void => {
+   public whenUpdated = (): void => {
         const prefs: Preferences = this._doc.prefs;
         this._muteEditor.container.style.display = prefs.enableChannelMuting ? "" : "none";
         const trackBounds: DOMRect = this._trackVisibleArea.getBoundingClientRect();
@@ -2533,7 +2533,7 @@ export class SongEditor {
                 }
 
                 if (window.localStorage.getItem("curVer") != "1.6") {
-                       document.body.appendChild(this.updatePromptHolder.updatePopupDiv);
+                       //document.body.appendChild(this.updatePromptHolder.updatePopupDiv);
                 } 
 
         if (this._doc.getFullScreen()) {

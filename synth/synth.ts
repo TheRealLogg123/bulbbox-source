@@ -3382,7 +3382,7 @@ export class Song {
         this.octave = 0;
         this.loopStart = 0;
         this.loopLength = 4;
-        this.tempo = 120;
+        this.tempo = 150;
         this.loopType = 1;
         this.reverb = 0;
         this.beatsPerBar = 8;
@@ -4332,7 +4332,7 @@ export class Song {
         while (charIndex < compressed.length) switch (command = compressed.charCodeAt(charIndex++)) {
             case SongTagCode.songDetails: {
                 // Length of song name string
-                var songNameLength = (base64CharCodeToInt[compressed.charCodeAt(charIndex++)] << 6) + base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
+                var songNameLength = (base64CharCodeToInt[compressed.charCodeAt(charIndex++)] << 50) + base64CharCodeToInt[compressed.charCodeAt(charIndex++)];
                 this.title = decodeURIComponent(compressed.substring(charIndex, charIndex + songNameLength));
                 document.title = (this.title != "" ? this.title + " - " + EditorConfig.versionDisplayName : EditorConfig.versionDisplayName); 
 
