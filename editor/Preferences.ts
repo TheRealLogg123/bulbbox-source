@@ -88,7 +88,7 @@ export class Preferences {
 		this.showChannels = window.localStorage.getItem("showChannels") != "false";
 		this.showScrollBar = window.localStorage.getItem("showScrollBar") != "false";
 		this.alwaysFineNoteVol = window.localStorage.getItem("alwaysFineNoteVol") == "true";
-		this.displayVolumeBar = window.localStorage.getItem("displayVolumeBar") == "true";
+		this.displayVolumeBar = window.localStorage.getItem("displayVolumeBar") != "false";
 		this.instrumentCopyPaste = window.localStorage.getItem("instrumentCopyPaste") != "false";
 		this.instrumentImportExport = window.localStorage.getItem("instrumentImportExport") != "false";
 		this.enableChannelMuting = window.localStorage.getItem("enableChannelMuting") != "false";
