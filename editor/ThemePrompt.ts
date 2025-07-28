@@ -156,6 +156,7 @@ export class ThemePrompt implements Prompt {
 		option({ value: "Tritanopia"}, "Tritanopia"),
 		option({ value: "2012 Video Tutorial"}, "2012 Video Tutorial"),
 		option({ value: "I am on fire"}, "I am on fire"),
+		option({ value: "Blurple"}, "Blurple"),
 		option({ value: "custom" }, "Custom")
 		),
 );

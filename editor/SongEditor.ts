@@ -1199,7 +1199,7 @@ export class SongEditor {
 
     private readonly _songTitleInputBox: InputBox = new InputBox(input(
         { placeholder: EditorConfig.versionDisplayName, style: "font-weight:bold; width: 0; border:none; flex: 1; background-color:${ColorConfig.editorBackground}; color:${ColorConfig.primaryText}; text-align:center", 
-            maxlength: "30", type: "text" }), this._doc, (oldValue: string, newValue: string) => new ChangeSongTitle(this._doc, oldValue, newValue));
+            maxlength: "50", type: "text" }), this._doc, (oldValue: string, newValue: string) => new ChangeSongTitle(this._doc, oldValue, newValue));
 
 
     private readonly _feedbackAmplitudeSlider: Slider = new Slider(input({ type: "range", min: "0", max: Config.operatorAmplitudeMax, value: "0", step: "1", title: "Feedback Amplitude" }), this._doc, (oldValue: number, newValue: number) => new ChangeFeedbackAmplitude(this._doc, oldValue, newValue), false);

@@ -4868,8 +4868,8 @@ export class ChangeVolume extends Change {
 export class ChangeSongTitle extends Change {
     constructor(doc: SongDocument, oldValue: string, newValue: string) {
         super();
-        if (newValue.length > 30) {
-            newValue = newValue.substring(0, 30);
+        if (newValue.length > 50) {
+            newValue = newValue.substring(0, 50);
         }
 
         doc.song.title = newValue;
