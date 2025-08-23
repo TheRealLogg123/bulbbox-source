@@ -1724,6 +1724,7 @@ export class Config {
 		{ name: "ramp", samples: generateSawWave(true) },
 		{ name: "trapezoid", samples: generateTrapezoidWave(2) },
 	    { name: "quasi-sine", samples: generateQuasiSineWave() },
+        { name: "half-sine", samples: generateSemisineWave() },
 		//{ name: "white noise", samples: generateWhiteNoiseFmWave() },
 		//{ name: "1-bit white noise", samples: generateOneBitWhiteNoiseFmWave() },
     ]);
@@ -2341,6 +2342,14 @@ function generateSawWave(inverse: boolean = false): Float32Array {
         wave[i] = inverse ? -wave[i] : wave[i];
     }
     return wave;
+}
+
+function generateSemisineWave() {
+    const wave = new Float32Array(Config.sineWaveLength + 1);
+        for (let i = 0; i < Config.sineWaveLength + 1; i++) {
+        wave[i] = Math.max(Math.sin(i * Math.PI * 2.0 / Config.sineWaveLength), 0) - 0.5;
+        }
+        return wave;
 }
 
 	// function generateWhiteNoiseFmWave() {
