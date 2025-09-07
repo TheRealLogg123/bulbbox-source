@@ -1725,7 +1725,7 @@ export class Config {
 		{ name: "trapezoid", samples: generateTrapezoidWave(2) },
 	    { name: "quasi-sine", samples: generateQuasiSineWave() },
         { name: "half-sine", samples: generateSemisineWave() },
-		//{ name: "white noise", samples: generateWhiteNoiseFmWave() },
+		{ name: "broken white noise", samples: generateWhiteNoiseFmWave() },
 		//{ name: "1-bit white noise", samples: generateOneBitWhiteNoiseFmWave() },
     ]);
     public static readonly pwmOperatorWaves: DictionaryArray<OperatorWave> = toNameMap([
@@ -2352,13 +2352,13 @@ function generateSemisineWave() {
         return wave;
 }
 
-	// function generateWhiteNoiseFmWave() {
-        // const wave = new Float32Array(Config.sineWaveLength + 1);
-        // for (let i = 0; i < Config.sineWaveLength + 1; i++) {
-            // wave[i] = Math.random() * 2.0 - 1.0;
-        // }
-        // return wave;
-    // }
+	function generateWhiteNoiseFmWave() {
+         const wave = new Float32Array(Config.sineWaveLength + 1);
+         for (let i = 0; i < Config.sineWaveLength + 1; i++) {
+             wave[i] = Math.random() * 2.0 - 1.0;
+         }
+         return wave;
+    }
 	// function generateOneBitWhiteNoiseFmWave() {
         // const wave = new Float32Array(Config.sineWaveLength + 1);
         // for (let i = 0; i < Config.sineWaveLength + 1; i++) {
