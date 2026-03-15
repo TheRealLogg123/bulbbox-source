@@ -57,7 +57,8 @@ export class EditorConfig {
             name: "Base Instruments", presets: <DictionaryArray<Preset>>toNameMap([
                 { name: "Square Wave", midiProgram: 80, settings: { "type": "chip", "eqFilter": [], "effects": ["aliasing"], "transition": "normal", "fadeInSeconds": 0, "fadeOutTicks": -1, "chord": "simultaneous", "wave": "square", "unison": "none", "envelopes": [] } },
                 { name: "Square Pulse", midiProgram: 80, settings: {"type":"PWM","volume":0,"eqFilter":[],"eqFilterType":false,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"effects":["panning"],"pan":0,"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"unison":"none","pulseWidth":50,"decimalOffset":0,"envelopes":[],"isDrum":false} },
-                { name: "White Noise", midiProgram: 80, settings: {"type":"noise","volume":0,"eqFilter":[],"eqFilterType":false,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"effects":["panning"],"pan":0,"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"unison":"none","wave":"white","envelopes":[],"isDrum":false} },
+                { name: "White Noise", midiProgram: 80, "isNoise":true, settings: {"type":"noise","volume":0,"eqFilter":[],"eqFilterType":false,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"effects":["panning"],"pan":0,"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"unison":"none","wave":"white","envelopes":[],"isDrum":false} },
+            { name: "White Noise", midiProgram: 80, settings: {"type":"noise","volume":0,"eqFilter":[],"eqFilterType":true,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"effects":["panning"],"pan":0,"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"unison":"none","wave":"white","envelopes":[],"isDrum":true} },
                 { name: "FM Sine", midiProgram: 55, settings: {"type":"FM","volume":0,"eqFilter":[],"eqFilterType":true,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"effects":["panning"],"pan":0,"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"algorithm":"1←(2 3 4)","feedbackType":"1⟲","feedbackAmplitude":0,"operators":[{"frequency":"1×","amplitude":15,"waveform":"sine","pulseWidth":5},{"frequency":"1×","amplitude":0,"waveform":"sine","pulseWidth":5},{"frequency":"1×","amplitude":0,"waveform":"sine","pulseWidth":5},{"frequency":"1×","amplitude":0,"waveform":"sine","pulseWidth":5},{"frequency":"1×","amplitude":0,"waveform":"sine","pulseWidth":5},{"frequency":"1×","amplitude":0,"waveform":"sine","pulseWidth":5}],"envelopes":[],"isDrum":false} },
             ]),
         },
@@ -122,7 +123,7 @@ export class EditorConfig {
                 { name: "Clock Tower/Church Bell", midiProgram: 80, settings: {"type":"noise","volume":0,"eqFilter":[],"eqFilterType":false,"eqSimpleCut":10,"eqSimplePeak":0,"envelopeSpeed":12,"discreteEnvelope":false,"eqSubFilters0":[],"effects":["panning","phaser"],"phaserMix":100,"phaserFreq":81,"phaserFeedback":100,"phaserStages":103,"pan":0,"panDelay":10,"fadeInSeconds":0,"fadeOutTicks":-1,"unison":"none","wave":"white","envelopes":[{"target":"noteVolume","envelope":"twang","inverse":false,"perEnvelopeSpeed":4,"perEnvelopeLowerBound":0,"perEnvelopeUpperBound":1}],"isDrum":false} },
             ]),
         },
-        
+
 
     ]);
 
